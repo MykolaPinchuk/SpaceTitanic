@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+  <head>
+    <title> Predict Baby Weight </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>    
+  </head>
+  <body>
+      <div class="container">
+        <div class="row my-5 pl-3">
+            <h1>Predict Spaceship Titanic passenger survival</h1>
+        </div>
+        <!-- Starts form section -->
+        <div class="form-container ">
+            <form class="form-horizontal" action = "/predict/" method="post">
+                <div class="form-group row">
+                  <label class="control-label col-sm-2" for="planet_earth">Is home planet Earth? (Enter 1 or 0):</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="planet_earth" name="planet_earth">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="control-label col-sm-2" for="planet_europa">Is home planet Europa? (Enter 1 or 0)</label>
+                  <div class="col-sm-4">          
+                    <input type="text" class="form-control" id="planet_europa" name="planet_europa">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="control-label col-sm-2" for="cryosleep">Is he in a cryosleep? (Enter 1 or 0)</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="cryosleep" name="cryosleep">
+                  </div>
+                <div class="form-group row">
+                  <label class="control-label col-sm-2" for="deck_g">Is he on deck G? (Enter 1 or 0) </label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="deck_g" name="deck_g">
+                  </div>
+		<div class="form-group row">
+                  <label class="control-label col-sm-2" for="starboard">Is he on starboard side? (Enter 1 or 0) </label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="starboard" name="starboard">
+                  </div>
+		<div class="form-group row">
+                  <label class="control-label col-sm-2" for="zero_service">Has he spent zero amount on onboard services? (Enter 1 or 0) </label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="zero_service" name="zero_service">
+                  </div>
+                </div>
+                <div class="form-group row"> 
+                <label class="control-label col-sm-2" for="">&nbsp;</label>                
+                  <div class="col-sm-offset-2 col-sm-4">
+                    <button type="submit" class="btn btn-primary">Predict</button>
+                  </div>
+                </div>
+              </form>
+            <!-- Ends form section -->
+        </div>
+    </div>
+  </body>
+</html>
+
+
