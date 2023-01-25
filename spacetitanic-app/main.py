@@ -1,4 +1,6 @@
 #import Flask 
+import numpy as np
+import joblib, sklearn
 from flask import Flask, render_template, request
 #create an instance of Flask
 app = Flask(__name__)
@@ -12,7 +14,7 @@ def predict():
         planet_europa = request.form.get('planet_europa')
         cryosleep = request.form.get('cryosleep')
         deck_g = request.form.get('deck_g')
-        starboard = request.form.get('stargboard')
+        starboard = request.form.get('starboard')
         zero_service = request.form.get('zero_service')
         #call preprocessDataAndPredict and pass inputs
         try:
