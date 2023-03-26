@@ -16,17 +16,22 @@ def predict():
         deck_g = request.form.get('deck_g')
         starboard = request.form.get('starboard')
         zero_service = request.form.get('zero_service')
+        room_service = request.form.get('room_service')
+        food_court = request.form.get('food_court')
+        shopping_mall = request.form.get('shopping_mall')
+        spa = request.form.get('spa')
+        vr_deck = request.form.get('vr_deck')        
         #call preprocessDataAndPredict and pass inputs
         try:
-            prediction = preprocessDataAndPredict(planet_earth, planet_europa, cryosleep, deck_g, starboard, zero_service)
+            prediction = preprocessDataAndPredict(planet_earth, planet_europa, cryosleep, deck_g, starboard, zero_service, room_service, food_court, shopping_mall, spa, vr_deck)
             #pass prediction to template
             return render_template('predict.html', prediction = prediction)
         except ValueError:
             return "Please Enter valid values"
         pass        
     pass
-def preprocessDataAndPredict(planet_earth, planet_europa, cryosleep, deck_g, starboard, zero_service):
-    test_data = [planet_europa,	planet_europa, cryosleep, deck_g, starboard, zero_service]
+def preprocessDataAndPredict(planet_earth, planet_europa, cryosleep, deck_g, starboard, zero_service, room_service, food_court, shopping_mall, spa, vr_deck):
+    test_data = [planet_earth, planet_europa, cryosleep, deck_g, starboard, zero_service, room_service, food_court, shopping_mall, spa, vr_deck]
     print(test_data)
     test_data = np.array(test_data).astype(np.float) 
     test_data = test_data.reshape(1,-1)
